@@ -29,10 +29,10 @@ public class CoinController
         for(Coin c : clist)
         {
             total = total + (c.getValue() * c.getQuantity());
-            System.out.println(c.getQuantity() + " " + c.getName());
+            System.out.println(c.getQuantity() + " " + (c.getQuantity() == 1 ? c.getName() : c.getNameplural()));
         }
 
-        System.out.println("Total in the piggy bank is " + total);
+        System.out.println("The piggy bank holds " + total);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
