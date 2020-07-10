@@ -30,6 +30,15 @@ public class Coin
         this.quantity = quantity;
     }
 
+    public void subtract(int x)
+    {
+        this.quantity = quantity - x;
+    }
+
+    public void emptyCurrency(){
+        this.quantity = 0;
+    }
+
     public long getCoinid()
     {
         return coinid;
